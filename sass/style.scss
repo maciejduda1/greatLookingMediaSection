@@ -1,0 +1,183 @@
+//colors:
+$icon-background-color: rgb(255,255,255);
+$tab-background-color: rgb(26, 26, 23);
+$open-tab-background-color: rgb(255,255,255);
+$media-accordion-background-color: #0287b8;
+
+@font-face {
+    font-family: 'Genericons';
+    src: url('../icons/genericons-regular-webfont.woff')format('woff'),
+    url('../icons/genericons-regular-webfont.eot')format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.container {
+    margin: 50px auto;
+    width: 90%;
+    .accordion {
+        width: 100%;
+        min-width: 800px;
+        display: block;
+        list-style-type: none;
+        overflow: hidden;
+        height: 200px;
+        font-size: 0;
+        background-color: $media-accordion-background-color;
+        .tab {
+            display: inline-block;
+            background-color: $tab-background-color;
+            border-right: #333 solid 1px; 
+            width: 80px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            margin: 0;
+            transition: all 0.5s ease-in-out 0.1s;
+            .social {
+                a {
+                    &:before, &:after {
+                        transition: all 0.4s ease-in-out 0.1s;
+                        width: 80px;
+                        height: 200px;
+                        position: absolute;
+                        text-indent: 0;
+                        padding-top: 90px;
+                        padding-left: 25px;
+                        display: block;
+                        font: normal 30px Genericons;
+                        color: $icon-background-color;
+                    }
+                    &:after {
+                        font-size: 48px;
+                        padding: 80px 0 0 20px;
+                        margin-left: 85px;
+                    }
+                    
+                }
+            }
+            &:hover {
+                width: 450px;
+                .social {
+                    a {
+                        &:before {
+                            margin-left: -100px;
+                        }
+                        &:after {
+                            margin-left: -5px;
+                        }
+                    }
+                }
+            }   
+            .content {
+                background-color: $open-tab-background-color;
+                width: 360px;
+                height: 200px;
+                margin-left: 80px;
+                position: relative;
+                padding: 50px 0 0 15px;
+                h1 {
+                    font-size: 2.5rem;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: 0.85rem;
+                    line-height: 1.4rem;
+                    padding-right: 30px;
+                }
+            }
+        }
+    }
+}
+
+// Icons
+.youtube {
+    a {
+        &:before, &:after {
+            content: '\f213'
+        }
+        &:after {
+            background-color: #ff0000;
+        }
+    }
+}
+
+.twitter {
+    a {
+        &:before, &:after {
+            content: '\f202'
+        }
+        &:after {
+            background-color: #0084b4;
+        }
+    }
+}
+
+.facebook {
+    a {
+        &:before, &:after {
+            content: '\f203'
+        }
+        &:after {
+            background-color: #3b5998;
+        }
+    }
+}
+
+.linkedin {
+    a {
+        &:before, &:after {
+            content: '\f207'
+        }
+        &:after {
+            background-color: #4875B4;
+        }
+    }
+}
+
+.github {
+    a {
+        &:before, &:after {
+            content: '\f200'
+        }
+        &:after {
+            background-color: #24292e;
+        }
+    }
+}
+
+@media(max-width: 950px) {
+    .container {
+        width: 70%;
+        .accordion {
+            display: block;
+            min-width: 450px;
+            height: auto;
+            .tab {
+                display: block;
+                width: 100%;
+                border-bottom: 3px #333 solid;
+                &:hover {
+                    width: 100%;
+                }
+                .content {
+                    width: 85%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .container {
+        width: 95%;
+        .accordion {
+        width: 100%;
+        min-width: 350px;     
+        }
+    }   
+}

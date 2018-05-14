@@ -1,0 +1,25 @@
+{
+  "name": "mediasectionexample",
+  "version": "1.0.0",
+  "description": "media section to use on webpages",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maciejduda1/greatLookingMediaSection.git"
+  },
+  "author": "Maciej Duda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maciejduda1/greatLookingMediaSection/issues"
+  },
+  "homepage": "https://github.com/maciejduda1/greatLookingMediaSection#readme",
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^2.1.0"
+  }
+}
